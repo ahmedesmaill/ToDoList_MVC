@@ -1,0 +1,29 @@
+﻿@model Item
+
+<div class="row">
+    <div class="col-12 mb-3">
+        <h2> Edit @Model.Title</h2>
+    </div>
+</div>
+
+<div class="row">
+    <form action="/Todoitems/Edit" method="post">
+        <input type="hidden" name="Id" value="@Model.Id">
+        <div class="mb-3">
+            <label for="exampleItemTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="exampleItemTitle" name="Title" value="@Model.Title">
+        </div>
+        <div class="mb-3">
+            <label for="exampleItemDescription" class="form-label"> Description</label>
+            <input type="text" class="form-control" id="exampleItemDescription" name="Description" value="@Model.Description">
+        </div>
+        <div class="mb-3">
+            <label for="exampleItemDeadline" class="form-label"> Deadline</label>
+            <input type="datetime" class="form-control" id="exampleItemDeadline" name="Deadline" value="@Model.Deadline">
+        </div>
+       
+        
+       
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
